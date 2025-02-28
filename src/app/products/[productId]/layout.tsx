@@ -1,5 +1,4 @@
-import "./globals.css";
-
+import  React from 'react'
 // Root layout in plain JSX
 // export default function RootLayout({ children }) {
 //     return (
@@ -9,19 +8,20 @@ import "./globals.css";
 //     )
 // }
 
-export const  metadata = {
-    title: "my-app",
-    description: "my-app",
-}
-
-export default function RootLayout({
+export default function ProductLayout({
    children,
     }: {
-    children: React.ReactNode
+    children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
-        <body>{children}</body>
-        </html>
+        <>
+
+            {children}
+
+            <h1>Featured Products !!</h1>
+
+
+        </>
     )
+
 }

@@ -1,5 +1,5 @@
-export default function ForgotPasswordPage() {
+export default function LoginPage() {
     return <div>
-        Forgot Password
+        Please Login
     </div>
 }

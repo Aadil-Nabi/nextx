@@ -1,5 +1,5 @@
-export default function ForgotPasswordPage() {
+export default function RegisterPage() {
     return <div>
-        Forgot Password
+        Please register here
     </div>
 }
