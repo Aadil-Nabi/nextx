@@ -1,6 +1,8 @@
 "use client";
 import "../globals.css";
 import React from "react";
+import Image from "next/image";
+import { useState } from "react";
 
 import {
   Dialog,
@@ -18,7 +20,6 @@ import {
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { useState } from "react";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
@@ -40,12 +41,10 @@ function classNames(...classes: string[]) {
 
 export default function DashboardLayout({
   children,
-  users,
   revenue,
   notifications,
 }: {
   children: React.ReactNode;
-  users: React.ReactNode;
   revenue: React.ReactNode;
   notifications: React.ReactNode;
 }) {
@@ -90,7 +89,7 @@ export default function DashboardLayout({
                 <div className="flex h-16 shrink-0 items-center">
                   <img
                     alt="Your Company"
-                    src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                    src="https://tailwindui.com/plus-assets/Image/logos/mark.svg?color=indigo&shade=600"
                     className="h-8 w-auto"
                   />
                 </div>
@@ -170,7 +169,7 @@ export default function DashboardLayout({
             <div className="flex h-16 shrink-0 items-center">
               <img
                 alt="Your Company"
-                src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://tailwindui.com/plus-assets/Image/logos/mark.svg?color=indigo&shade=600"
                 className="h-8 w-auto"
               />
             </div>

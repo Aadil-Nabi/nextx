@@ -1,3 +1,4 @@
+import Image from "next/image";
 const navigation = {
     solutions: [
         { name: 'Marketing', href: '#' },
@@ -93,10 +94,12 @@ export default function Footer() {
             <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                     <div className="space-y-8">
-                        <img
+                        <Image
                             alt="Company name"
-                            src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                            src="https://tailwindui.com/plus-assets/Image/logos/mark.svg?color=indigo&shade=600"
                             className="h-9"
+                            width={9}
+                            height={9}
                         />
                         <p className="text-sm/6 text-balance text-gray-600">
                             Making the world a better place through constructing elegant hierarchies.

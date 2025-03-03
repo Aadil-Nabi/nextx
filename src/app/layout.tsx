@@ -1,7 +1,5 @@
 import "./globals.css";
 import React from "react";
-import Header from "@/app/components/header";
-import Footer from "@/app/components/footer";
 import {Metadata} from "next";
 
 export const  metadata: Metadata = {
