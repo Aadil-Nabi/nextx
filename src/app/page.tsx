@@ -1,5 +1,4 @@
 "use client";
-import Footer from "./components/footer";
 import Header from "./components/header";
 
 import { redirect } from "next/navigation";

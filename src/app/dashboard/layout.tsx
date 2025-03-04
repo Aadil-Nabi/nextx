@@ -20,6 +20,7 @@ import {
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
@@ -52,7 +53,6 @@ export default function DashboardLayout({
 
   return (
     <>
-
       <div>
         <Dialog
           open={sidebarOpen}
@@ -167,11 +167,13 @@ export default function DashboardLayout({
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
             <div className="flex h-16 shrink-0 items-center">
-              <img
-                alt="Your Company"
-                src="https://tailwindui.com/plus-assets/Image/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
-              />
+              <Link href={"/"}>
+                <img
+                  alt="Your Company"
+                  src="https://tailwindui.com/plus-assets/Image/logos/mark.svg?color=indigo&shade=600"
+                  className="h-8 w-auto"
+                />
+              </Link>
             </div>
             <nav className="flex flex-1 flex-col">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
