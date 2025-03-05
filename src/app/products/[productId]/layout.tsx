@@ -1,4 +1,4 @@
-import  React from 'react'
+import React from "react";
 // Root layout in plain JSX
 // export default function RootLayout({ children }) {
 //     return (
@@ -9,19 +9,15 @@ import  React from 'react'
 // }
 
 export default function ProductLayout({
-   children,
-    }: {
-    children: React.ReactNode;
+  children,
+}: {
+  children: React.ReactNode;
 }) {
-    return (
-        <>
+  return (
+    <>
+      {children}
 
-            {children}
-
-            <h1>Featured Products !!</h1>
-
-
-        </>
-    )
-
+      <h1>Featured Products !!</h1>
+    </>
+  );
 }
