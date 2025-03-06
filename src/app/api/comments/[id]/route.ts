@@ -1,11 +1,11 @@
 import {comments} from "@/app/api/comments/data";
 
+// Get one comment based on id passed in the body.
 export async function GET(req: Request, {params}: { params: Promise<{ id: string }> }) {
     const {id} = await params;
 
     const comment = comments.find(comment => comment.id === parseInt(id));
     if (!comment) {
-        // return Response.json("no comment found");
         return new Response(JSON.stringify("No comment found."), {
             headers: {'content-type': 'application/json'},
             status: 404
@@ -27,12 +27,15 @@ export async function PATCH(req: Request, {params}: { params: Promise<{ id: stri
 
 export async function DELETE(req: Request, {params}: { params: Promise<{ id: string }> }) {
     const {id} = await params;
-    const comment = comments.find(comment => comment.id === parseInt(id));
-    console.log(comment)
 
     const index = comments.findIndex((comment) => comment.id === parseInt(id));
 
     comments.splice(index, 1);
 
-    return Response.json(comments);
+    return new Response(
+        JSON.stringify("Comment deleted successfully."),
+        {headers: {'content-type': 'application/json'}, status: 200},
+
+    )
+
 }
